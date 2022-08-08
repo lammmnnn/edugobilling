@@ -1,31 +1,37 @@
 import React from 'react';
-import {CartComp} from "./CartComp";
-import {ChangeLanguageComp} from "./ChangeLanguageComp";
-import { withNamespaces } from 'react-i18next';
 
 // @ts-ignore
-export function HeaderComp({ t }) {
+export function HeaderComp() {
     return (
-        <header id="main-header" className="style-header">
-            <div className="header-container container">
-                <div className="header-wrap d-flex flex-wrap justify-content-between">
-                    <a href="#freeship" className="order-0 d-lg-none col-3 mt-3">
-                        <img className="logo-freeship" src={require('../img/header/freeship.png')} alt=''></img>
-                    </a>
-                    <a href="/home" className="logo-menu order-1 order-lg-0 col-3 col-lg-2 mt-3 d-flex justify-content-center justify-content-lg-start">
-                        <img src={require('../img/header/tiki.png')} alt=''></img>
-                    </a>
-                    <div className="FormSearch order-4 order-lg-2 d-flex flex-row col-12 col-lg-5 mt-2 mt-lg-3 bg-white">
-                        <img className="iconSearch d-lg-none ml-2" src={require('../img/header/search_mobile.png')} alt='' />
-                        <input type="text" value="" className="FormSearch__input ml-1 ml-lg-2"
-                               placeholder={t('Searchbar-placeholder')}/>
-                        <button id="searchbar_button" className="FormSearch__button d-none d-lg-block">
-                            <img className="iconSearch mr-2" src={require('../img/header/search.png')} alt='' />{t('Search-button')}
-                        </button>
-                    </div>
-                    <ChangeLanguageComp t={t} />
-                    <CartComp t={t} />
+        <header id="main-header" className="">
+            <div className="flex flex-wrap mx-auto">
+                <div className="w-full bg-[#00649D] ">
+                    <div className="container mx-auto min-h-[25px] hidden lg:flex flex-row-reverse gap-[20px] px-[135px]">
+                    <button className="text-xs text-white font-normal decoration-solid">Đăng xuất</button>
+                    <button className="text-xs text-white font-bold">Xin chào: haingonzainhatvtconline</button>
 
+                    </div>
+                </div>
+                <div className="w-full bg-white shadow-[0_4px_10px_0px_rgba(0,0,0,0.2)]">
+                    <div className="container h-[60px] mx-auto flex flex-row justify-between w-full px-md-[135px] px-5">
+                        <img src={require("../img/goedu_icon.png")} className="h-[40.18px] self-center" alt='' />
+                        <div className="flex flex-row items-center">
+                            <a href="#/doigo" data-index="0" className="w-[96px] hidden md:flex justify-center items-center">
+                                <span className="text-sm font-bold text-[#00649D]">ĐỔI GO</span>
+                            </a>
+                            <a href="#/lichsu" data-index="1" className="w-[96px] hidden md:flex justify-center items-center">
+                                <span className="text-sm font-bold text-[#00649D]">LỊCH SỬ</span>
+                            </a>
+                            <a href="#/baomat" data-index="2" className="w-[96px] hidden md:flex justify-center items-center mr-[26px]">
+                                <span className="text-sm font-bold text-[#00649D]">BẢO MẬT</span>
+                            </a>
+                            <div className="flex justify-center items-center mr-[40px]">
+                                <span className="text-sm font-bold text-[#00649D]">SỐ DƯ: 100 GO</span>
+                            </div>
+                            <button className="bg-[#00649D] h-[35px] w-[100px] rounded text-white
+                            font-bold text-sm">Nạp GO</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

@@ -1,57 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import './App.css';
+import {HeaderComp} from "./components/HeaderComp";
+import {MainComp} from "./components/MainComp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+      <Router>
+        <div className="App">
+          <div className='home-page'>
+            <HeaderComp />
+            <Routes>
+              <Route path="/" element={<Navigate to="/home" replace />} />
+              <Route path="/home" element={<MainComp />} />
+            </Routes>
+          </div>
+        </div>
+        <footer className="bg-[#00649D]">
+            <div className="text-center p-[22px]">
+                <p>Địa chỉ: Tầng 12 - VTC Online - 18 Tam Trinh - Hà Nội</p>
+                <p>Hotline: <span className="font-bold">1900.636.876</span> nhánh 3 ( T2~T6, giờ hành chính)
+                    | Email: <span className="font-bold">hotro@go.vn</span></p>
+                <p><a href="">Câu hỏi thường gặp</a> | <a>Điều khoản dịch vụ</a> | <a>Chính sách bảo mật</a></p>
+                <p className="italic">Copyright © GoEdu - VTC Online. All Rights Reserved.</p>
+            </div>
+        </footer>
+      </Router>
   );
 }
 

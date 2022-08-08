@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
   decrement,
-  increment,
   incrementByAmount,
   incrementAsync,
   incrementIfOdd,
@@ -32,7 +31,7 @@ export function Counter() {
         <button
           className={styles.button}
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          onClick={() => dispatch(decrement())}
         >
           +
         </button>
