@@ -33,7 +33,7 @@ export function MainComp() {
         },
         "&.Mui-selected, &.Mui-selected:hover": {
             color: "white !important",
-            backgroundImage: "linear-gradient(to right, #00649D, #29ABE2)"
+            backgroundImage: "linear-gradient(to right, #00649D, #29ABE2)",
         }
     }));
     const handleKhois = (
