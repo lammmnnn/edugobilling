@@ -13,7 +13,7 @@ export function HeaderComp() {
                     </div>
                 </div>
                 <div className="w-full bg-white shadow-[0_4px_10px_0px_rgba(0,0,0,0.2)]">
-                    <div className="container h-[60px] mx-auto flex flex-row justify-between w-full px-md-[135px] px-5">
+                    <div className="container h-[60px] mx-auto flex flex-row justify-between w-full px-5 md:px-[135px]">
                         <img src={require("../img/goedu_icon.png")} className="h-[40.18px] self-center" alt='' />
                         <div className="flex flex-row items-center">
                             <a href="#/doigo" data-index="0" className="w-[96px] hidden md:flex justify-center items-center">

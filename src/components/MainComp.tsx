@@ -49,7 +49,7 @@ export function MainComp() {
 
             <CartPopUpComp isTrigger={popup} />
             <MiniPopup isTrigger={popup2} />
-            <div className="pt-4 md:pt-[45px] container mx-auto !px-6 md:px-[135px] md:flex flex-row md:grid grid-cols-10 gap-3">
+            <div className="pt-4 md:pt-[45px] container mx-auto px-6 md:px-[135px] md:flex flex-row md:grid grid-cols-10 gap-3">
                 <div className="col-span-3 ">
                     <div className="w-full md:w-11/12 h-[229px] rounded-[5px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] mb-4 md:mb-0">
                         <div className="h-[83px] p-[20px] bg-[#00649D] rounded-[5px_5px_0_0]">
@@ -104,7 +104,7 @@ export function MainComp() {
                     <div className="flex flex-row mb-4">
                         <input type="checkbox" /><span className="ml-1 font-bold text-base text-[#84b3cf]">Dùng ruby đổi gói</span>
                     </div>
-                    <table className="mb-8">
+                    <table className="mb-8 w-full">
                         <tr className="bg-[#CCCCCC]">
                             <th className="w-[197px] text-sm py-3">Tên gói</th>
                             <th className="w-[448px] text-sm">Chi tiết</th>
@@ -128,7 +128,7 @@ export function MainComp() {
                                            price='299' />
                     </table>
                     <label className="text-[#DC0000] italic font-bold text-base"><img src="" height="16px" /> GIỎ HÀNG CỦA BẠN:</label>
-                    <table>
+                    <table className="w-full">
                         <tr className="bg-[#CCCCCC]">
                             <th className="w-[60px] text-sm py-3">STT</th>
                             <th className="w-[180px] text-sm">ID học sinh</th>
